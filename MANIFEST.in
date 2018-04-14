@@ -1,0 +1,2 @@
+include README.md AUTHORS LICENSE setup.py setup.cfg requirements.txt
+global-exclude __pycache__ *.pyc
