@@ -19,7 +19,7 @@ To install, clone the UnFold plugin directory to your development environment. W
 
     pip install .
 
-You can also create a distributable Wheel of this module to include in distribution of your application. This module is not currently available via ``pip`` but is ready out of the box to be uploaded to [PyPi](https://pypi.python.org).
+You can also create a distributable Wheel of this module to include in distribution of your application. This module is not currently available via ``pip`` but is ready out of the box to be uploaded to `PyPi <https://pypi.python.org>`_.
 
 USAGE
 -----
@@ -45,4 +45,4 @@ If you're using class-based Views, the `unfold_required` can be applied to your 
 
     path('exampleview/', unfold_required(get_article_info)(ExampleView.as_view()))
 
-For more information about using view decorators, see [View decorators](https://docs.djangoproject.com/en/2.0/topics/http/decorators/) and [Class-based View decorators](https://docs.djangoproject.com/en/2.0/topics/class-based-views/intro/#decorating-class-based-views).
+For more information about using view decorators, see `View decorators <https://docs.djangoproject.com/en/2.0/topics/http/decorators/>`_ and `Class-based View decorators <https://docs.djangoproject.com/en/2.0/topics/class-based-views/intro/#decorating-class-based-views>`_.
