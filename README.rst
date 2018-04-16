@@ -11,7 +11,7 @@ UnFold Django Plugin.  UnFold plugin to support payments in Django backends
 
 PURPOSE
 -------
-The UnFold plugin for Django backends allows content creators to easily integrate the UnFold payment gateway into their Django-based applications by simply annotating their article View with the UnFold decorator.
+The UnFold plugin for Django backends allows content creators to easily integrate the `UnFold payment gateway <http://github.com/wesny/unfold>`_ into their Django-based applications by simply annotating their article View with the UnFold decorator.
 
 INSTALLATION
 ------------
