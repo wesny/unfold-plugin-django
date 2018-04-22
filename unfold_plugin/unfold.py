@@ -18,7 +18,8 @@ import requests
 _auth_key = settings.UNFOLD_AUTH_KEY
 _auth_username = settings.UNFOLD_AUTH_USERNAME
 
-HOST_URL = "http://localhost:8000"
+#HOST_URL = "http://localhost:8000"
+HOST_URL = "https://unfoldapp.herokuapp.com"
 
 def unfold_required(get_article_attributes):
 
