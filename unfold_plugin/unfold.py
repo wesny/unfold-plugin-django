@@ -13,6 +13,8 @@ INSERT MODULE DESCRIPTION HERE.
 from django.shortcuts import redirect
 from django.conf import settings
 import requests
+from urllib import urlencode
+from urlparse import urlparse, urlunparse, parse_qs
 
 
 _auth_key = settings.UNFOLD_AUTH_KEY
@@ -77,6 +79,11 @@ def has_purchased(auth_key, username, id):
             return False
 
 def register_article(auth_key, attribs):
+    u = urlparse(attribs['url'])
+    query = parse_qs(u.query)
+    query.pop('token', None)
+    u = u._replace(query=urlencode(query, True))
+    attribs['url'] = urlunparse(u)
     headers ={'Authorization': 'JWT ' + auth_key}
     try:
         r = requests.post(HOST_URL + "/api/articles", headers=headers, data=attribs)
