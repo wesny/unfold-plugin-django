@@ -50,8 +50,9 @@ def validate_token(auth_key, token):
     try:
         r = requests.get(HOST_URL + "/api/validate-token", headers=headers, params={"token": token})
         r.raise_for_status()
+        print(r.json())
         return r.json()['valid'], r.json()['username']
-    except requests.exceptions.HTTPError as e:
+    except Exception as e:
         if e.response.status_code == 401:
             raise requests.exceptions.HTTPError('Authentication key is invalid')
         else:
@@ -67,7 +68,7 @@ def has_purchased(auth_key, username, id):
         r = requests.get(HOST_URL + "/api/has-access", headers=headers, params=data)
         r.raise_for_status()
         return r.json()['result']
-    except requests.exceptions.HTTPError as e:
+    except Exception as e:
         if e.response.status_code == 401:
             raise requests.exceptions.HTTPError('Authentication key is invalid')
         else:
