@@ -13,8 +13,7 @@ INSERT MODULE DESCRIPTION HERE.
 from django.shortcuts import redirect
 from django.conf import settings
 import requests
-from urllib import urlencode
-from urlparse import urlparse, urlunparse, parse_qs
+from urllib.parse import urlencode,urlparse, urlunparse, parse_qs
 
 
 _auth_key = settings.UNFOLD_AUTH_KEY
