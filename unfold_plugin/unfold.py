@@ -51,6 +51,8 @@ def validate_token(auth_key, token):
         r = requests.get(HOST_URL + "/api/validate-token", headers=headers, params={"token": token})
         r.raise_for_status()
         print(r.json())
+        if r.json()['valid'] == False:
+            return False, None
         return r.json()['valid'], r.json()['username']
     except Exception as e:
         if e.response.status_code == 401:
